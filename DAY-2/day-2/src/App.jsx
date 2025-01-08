@@ -41,12 +41,13 @@ function CoreConcept(props){
   // Is Component is Dynamic 
   return (
   <li>
-    <img src={props.img} alt="" />
+    <img src={props.image} alt="" />
     <h3>
       {props.title}
     </h3>
     <p>
-       {props.discription}
+       {props.description}
+
     </p>
   </li>
   )
@@ -74,10 +75,17 @@ function App() {
             <ul>
               {/* Here CoreConcept is a child Component Here we are Passing the Object to the Child Component */}
               {/* Here 4 time the child component is called so time it will show in the DOM  */}
-                <CoreConcept title="Components" discription="the component is working" img={ComponentImage}/>
-                <CoreConcept title="Props"      discription="the Props is working" img={ConfigImg}/>
-                <CoreConcept title="Core"       discription="the Core is working" img={JsxImg}/>
-                <CoreConcept title="Child "     discription="the Child is working" img={reactImage}/>
+              {/* this is another method of passing the data to the parent page by importing the values from another file and assining to variables */}
+                {/* <CoreConcept title={CORE_CONCEPTS[0].title} discription={CORE_CONCEPTS[0].description} img={CORE_CONCEPTS[0].image}/> */}
+
+             {/* this is the shorter way of above code using the spread operator the key value pair is made to  one object */}
+             {/* also want to check the spelling of the key in the object correct */}
+                <CoreConcept {...CORE_CONCEPTS[0]}/>q
+
+
+                <CoreConcept title={CORE_CONCEPTS[1].title} description={CORE_CONCEPTS[1].description} image={CORE_CONCEPTS[1].image}/>
+                <CoreConcept title={CORE_CONCEPTS[2].title} description={CORE_CONCEPTS[2].description} image={CORE_CONCEPTS[2].image}/>
+                <CoreConcept title={CORE_CONCEPTS[3].title} description={CORE_CONCEPTS[3].description} image={CORE_CONCEPTS[3].image}/>
             </ul>
         </section>
       </main>
