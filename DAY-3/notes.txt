@@ -1,0 +1,2 @@
+Create separate components and imported to the App component 
+
