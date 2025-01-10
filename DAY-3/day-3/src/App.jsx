@@ -11,6 +11,8 @@ import JsxImg from  './assets/jsx-ui.png'
 import Header from './components/Header'
 
 import CoreConcept from './components/CoreConcept'
+
+import TabButton from './components/TabButton'
 import { CORE_CONCEPTS } from './data'
 //this example for dynamuic content 
 
@@ -56,6 +58,16 @@ function App() {
                 <CoreConcept title={CORE_CONCEPTS[2].title} description={CORE_CONCEPTS[2].description} image={CORE_CONCEPTS[2].image}/>
                 <CoreConcept title={CORE_CONCEPTS[3].title} description={CORE_CONCEPTS[3].description} image={CORE_CONCEPTS[3].image}/>
             </ul>
+        </section>
+
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+           <TabButton>Components</TabButton>
+           <TabButton>Hello</TabButton>
+           <TabButton>My</TabButton>
+           <TabButton>Dear </TabButton>
+          </menu>
         </section>
       </main>
     </div>
